@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 async function getData(id: number) {
@@ -33,7 +34,7 @@ const product = async ({ params: { id } }: Props) => {
     return (
         <div className="singleProduct">
             <div className="singleProductImg">
-                <img src={product.image} alt={product.title} />
+                <Image width={650} height={750} src={product.image} alt={product.title} />
             </div>
             <div className="singleProductText">
                 <h2 className="singleProductTitle">{product.title}</h2>
